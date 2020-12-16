@@ -1,0 +1,28 @@
+.tabBar {
+  height: 48px;
+  // background-image: linear-gradient(180deg, #ffeec3 0%, #f7cd7b 100%);
+  // box-shadow: inset 0 0 0 0 #facd71;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 0 #f2f3f5;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+    .p-active {
+      color: #48a3a0;
+    }
+    img {
+      display: block;
+      height: 20px;
+    }
+  }
+}

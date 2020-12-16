@@ -1,0 +1,15 @@
+.contentBox {
+  height: 100%;
+  overflow: auto;
+  .indexBox {
+    position: fixed;
+    right: 0;
+    list-style: none;
+    top: 50%;
+    transform: translateY(-50%);
+    li {
+      width: 20px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.enroll-container2 {
+  padding: 0 16px;
+  margin-bottom: 10px;
+  .enroll-item {
+    height: 114px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 6px 12px 0 rgba(224, 224, 224, 0.7);
+    border-radius: 8px;
+    padding: 20px 16px;
+    display: flex;
+    &-avatal {
+      width: 44px;
+      height: 44px;
+      padding: 2px;
+      border-radius: 6px;
+      border: 1px solid #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+      }
+    }
+    &-right {
+      width: calc(100% - 44px);
+      box-sizing: border-box;
+      padding-left: 12px;
+      &-top {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        p {
+          flex: 1;
+          box-sizing: border-box;
+          font-size: 16px;
+          color: #222222;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        span {
+          font-size: 18px;
+          color: #48a3a0;
+          text-align: right;
+        }
+      }
+      &-middle {
+        font-size: 14px;
+        line-height: 14px;
+        color: #666666;
+        margin: 10px auto 12px;
+      }
+      &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-left {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          color: #999999;
+          p {
+            img {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+            }
+          }
+          & > span {
+            padding-left: 4px;
+          }
+        }
+        &-active {
+          background: #f1f8f8;
+          border-radius: 2px;
+          color: #48a3a0;
+          font-size: 12px;
+          padding: 4px 6px;
+        }
+        &-default {
+          background: #f7f7f7;
+          border-radius: 2px;
+          font-size: 12px;
+          color: #999999;
+          padding: 4px 6px;
+        }
+      }
+    }
+  }
+}

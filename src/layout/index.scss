@@ -1,0 +1,22 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .content {
+    flex: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .am-list-view-scrollview {
+      height: 100%;
+      .am-list-body {
+        padding: 10px 0;
+        background: #f7f7f7;
+        &:before,
+        &:after {
+          height: 0;
+        }
+      }
+    }
+  }
+}

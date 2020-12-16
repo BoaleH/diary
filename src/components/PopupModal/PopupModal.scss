@@ -1,0 +1,58 @@
+.PopupModal {
+  width: 100%;
+  position: absolute;
+  background: rgba($color: #000, $alpha: 0.66);
+  top: 0;
+  box-sizing: border-box;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modalContent {
+    width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-top {
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      padding: 24px 16px;
+      p {
+        text-align: center;
+      }
+      &-title {
+        font-size: 18px;
+        line-height: 18px;
+        color: #222222;
+        margin-bottom: 10px;
+      }
+      &-content {
+        font-size: 14px;
+        line-height: 14px;
+        color: #999999;
+      }
+      &-btn {
+        margin-top: 24px;
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+        background: #48a3a0;
+        border-radius: 6px;
+        border-radius: 6px;
+        border: none;
+        font-size: 18px;
+        color: #ffffff;
+      }
+    }
+    & > img {
+      display: block;
+      width: 34px;
+      margin-top: 30px;
+    }
+  }
+}
