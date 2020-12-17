@@ -7,8 +7,10 @@ type StateType = {
 type PropType = {
   headerLeftBtnText?: string; // 左按钮文案
   clickLeftBtnCallBack?: any; // 点击左按钮的回调函数
+  needLeftBtnBoxshadow?: boolean; // 是否展示左按钮阴影
   headerRightBtnText?: string; // 右按钮文案
   clickRightBtnCallBack?: any; // 点击右按钮的回调函数
+  needRightBtnBoxshadow?: boolean; // 是否展示右按钮阴影
   headerTitle: string; // 头部标题
   [propName: string]: any;
 };
@@ -18,19 +20,15 @@ interface Header {
 }
 
 class Header extends Component {
-  // 后退
-  private goBack = () => {
-    this.props.history.go(-1);
-  }
 
   render() {
-    const { headerTitle, headerLeftBtnText, clickLeftBtnCallBack, headerRightBtnText, clickRightBtnCallBack } = this.props;
+    const { headerTitle, headerLeftBtnText, clickLeftBtnCallBack, needLeftBtnBoxshadow, headerRightBtnText, clickRightBtnCallBack, needRightBtnBoxshadow } = this.props;
 
     return (
-      <div className={style.header}>
-        {headerLeftBtnText && <div className={style.headerLeftBtn} onClick={clickLeftBtnCallBack ? clickLeftBtnCallBack : this.goBack}>{headerLeftBtnText}</div>}
+      <div className={style.header} style={headerLeftBtnText ? {justifyContent: 'space-between'} : {}}>
+        {headerLeftBtnText && <div className={style.headerLeftBtn} style={needLeftBtnBoxshadow ? {boxShadow: '0 2px 0px 0 rgba(0, 0, 0, 0.5)'} : {}} onClick={clickLeftBtnCallBack ? clickLeftBtnCallBack : () => {}}>{headerLeftBtnText}</div>}
         <div className={style.title}>{headerTitle}</div>
-        {headerRightBtnText && <div className={style.headerRightBtn} onClick={clickRightBtnCallBack ? clickRightBtnCallBack : this.goBack}>{headerRightBtnText}</div>}
+        {headerRightBtnText && <div className={style.headerRightBtn} style={needRightBtnBoxshadow ? {boxShadow: '0 2px 0px 0 rgba(0, 0, 0, 0.5)'} : {}} onClick={clickRightBtnCallBack ? clickRightBtnCallBack : () => {}}>{headerRightBtnText}</div>}
       </div>
     )
   }

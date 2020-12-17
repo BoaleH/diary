@@ -5,4 +5,23 @@
   font-family: NotoSansSC;
   color: #ffffff;
   letter-spacing: 1.22px;
+  background-color: #291e1e;
+}
+
+.button:hover {
+  background-color: #262626;
+}
+
+.button:active {
+  background-color: #000;
+}
+
+.disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NotoSansSC;
+  color: #ffffff;
+  letter-spacing: 1.22px;
+  background-color:#939393;
 }

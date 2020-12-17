@@ -15,6 +15,7 @@ type PropType = {
   btnWidth?: number; // 按钮宽度
   btnHeigth?: number; // 按钮高度
   fontSize?: number; // 文字大小
+  disabled?: boolean; // 是否禁用
   [propName: string]: any;
 };
 interface Button {
@@ -39,9 +40,9 @@ class Button extends Component {
   }
 
   render() {
-    const { bottonText } = this.props;
+    const { bottonText, disabled } = this.props;
     return (
-      <div className={style.button} style={this.handleBtnStyle()}>
+      <div className={disabled ? style.disabled : style.button} style={this.handleBtnStyle()}>
         {bottonText}
       </div>
     )

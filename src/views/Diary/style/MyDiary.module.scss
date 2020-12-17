@@ -1,0 +1,48 @@
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContent {
+  flex: 1;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 30px 0 0 27px;
+
+  .card {
+    float: left;
+    width: 444px;
+    height: 225px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+    padding: 12px;
+    box-sizing: border-box;
+    margin: 0px 27px 30px 0;
+  }
+
+  .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 138px;
+    color: #42495e;
+  }
+
+  .diaryCard {
+    .diaryDate {
+      width: 100%;
+      text-align: right;
+      font: 300 18px NotoSansSC;
+      color: #42495e;
+    }
+
+    .diaryTitle {
+      margin-top: 59px;
+      text-align: center;
+      font: 300 24px NotoSansSC;
+      color: #42495e;
+    }
+  }
+}

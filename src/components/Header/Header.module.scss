@@ -5,7 +5,7 @@
   height: 48px;
   background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0 24px;
@@ -15,7 +15,7 @@
 .headerLeftBtn {
   font: 14px NotoSansSC;
   color: #42495e;
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -26,5 +26,5 @@
 .headerRightBtn {
   font: 14px NotoSansSC;
   color: #42495e;
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.5);
 }

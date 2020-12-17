@@ -5,12 +5,12 @@ import LoginOrRegisterCard from '../../components/LoginOrRegisterCard/LoginOrReg
 import InputItem from '../../components/InputItem/InputItem';
 import Button from '../../components/Button/Button';
 
-export default class Login extends Component {
+class Login extends Component {
   render() {
     return (
-      <div className={style.loginPage}>
+      <div className={style.page}>
         <Header headerTitle='登录'/>
-        <div className={style.loginPageContent}>
+        <div className={style.pageContent}>
           <LoginOrRegisterCard>
             <div className={style.emailInput}>
               <InputItem inputItemTitle="邮件地址" InputItemPlaceholder="邮件地址..." inputType="email"/>
@@ -18,13 +18,15 @@ export default class Login extends Component {
             <div className={style.passwordInput}>
               <InputItem inputItemTitle="密码" InputItemPlaceholder="密码..." inputType="password"/>
             </div>
-            <div className="btn">
+            <div className={style.btn}>
               <Button bottonText="登录" btnWidth={165} btnHeigth={50} />
             </div>
-            ss
+            <div className={style.switchRegisterOrLogin}><span>没有账号？注册</span></div>
           </LoginOrRegisterCard>
         </div>
       </div>
     )
   }
 }
+
+export default Login;
