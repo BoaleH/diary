@@ -1,0 +1,23 @@
+.InputItem {
+  width: 100%;
+
+  .InputItemTitle {
+    font-weight: 300;
+    font-family: NotoSansSC;
+    color: #000;
+  }
+
+  .InputItemInput {
+    width: 100%;
+    height: 46px;
+    border: solid 2px #000;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    font: 300 22px NotoSansSC;
+  }
+
+  input::input-placeholder {
+    color: #8a8a8a;
+ }
+}

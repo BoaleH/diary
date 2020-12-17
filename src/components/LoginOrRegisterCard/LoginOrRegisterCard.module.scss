@@ -1,0 +1,24 @@
+.LoginOrRegisterCard {
+  width: 562px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 64px;
+}
+
+.avatal {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  margin: 188px 0 64px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
