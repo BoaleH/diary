@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import style from './InputItem.module.scss';
 
 const defaultProps = {
+  inputOrTextarea: 'input',
   titleFontSize: 22,
   titleMarginBottom: 13,
   inputType: 'text',
@@ -11,6 +12,7 @@ type StateType = {
   [propName: string]: any;
 };
 type PropType = {
+  inputOrTextarea?: string; // 选择input或textarea
   inputItemTitle: string; // 输入框标题
   titleFontSize?: number; // 输入框标题大小
   titleMarginBottom?: number; // 输入框标题与输入框的间距
@@ -38,12 +40,13 @@ class InputItem extends Component {
   }
 
   render() {
-    const { inputItemTitle, InputItemPlaceholder, inputType } = this.props;
+    const { inputOrTextarea, inputItemTitle, InputItemPlaceholder, inputType } = this.props;
 
     return (
       <div className={style.InputItem}>
         <div className={style.InputItemTitle} style={this.handleTitleStyle()}>{inputItemTitle}</div>
-        <input type={inputType} className={style.InputItemInput} placeholder={InputItemPlaceholder}/>
+        {inputOrTextarea === 'input' && <input type={inputType} className={style.InputItemInput} placeholder={InputItemPlaceholder}/>}
+        {inputOrTextarea === 'textarea' && <textarea placeholder={InputItemPlaceholder} className={style.InputItemTextarea} />}
       </div>
     )
   }

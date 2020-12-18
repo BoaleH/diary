@@ -17,7 +17,19 @@
     font: 300 22px NotoSansSC;
   }
 
-  input::input-placeholder {
+  .InputItemTextarea {
+    width: 100%;
+    height: 299px;
+    border: solid 2px #000;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    font: 300 22px NotoSansSC;
+    resize: none;
+    outline: none;
+  }
+
+  input::input-placeholder, textarea::textarea-placeholder { 
     color: #8a8a8a;
  }
 }
