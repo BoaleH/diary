@@ -4,8 +4,20 @@ import Header from '../../components/Header/Header';
 import LoginOrRegisterCard from '../../components/LoginOrRegisterCard/LoginOrRegisterCard';
 import InputItem from '../../components/InputItem/InputItem';
 import Button from '../../components/Button/Button';
+import { registerApi } from '../../api/Common';
 
 class Register extends Component {
+
+  async componentDidMount () {
+    const data = {
+      name: '黄博',
+      email: 'boale@foxmail.com',
+      password: '123456',
+    }
+    const res: any = await registerApi(data);
+    console.log(res)
+  }
+
   render() {
     return (
       <div className={style.page}>

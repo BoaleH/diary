@@ -1,27 +1,18 @@
 // 开发环境地址
 const urlDev = {
-  backendBaseUrl: "https://employee-uat.fuzfu.net/job-platform-employee", // 后台地址
-  // backendBaseUrl: "http://192.168.96.141:8010/job-platform-employee",
-  employeeUrl: 'https://job-uat.fuzfu.net', // 应聘端地址
-  hrUrl: 'https://recruit-uat.fuzfu.net', // 招聘端地址
+  backendBaseUrl: "https://hngbo-54b18a.postdemo.tcn.asia", // 后台地址
 };
 // uat环境地址
 const urlUat = {
-  backendBaseUrl: "https://employee-uat.fuzfu.net/job-platform-employee", // 后台地址
-  employeeUrl: 'https://job-uat.fuzfu.net', // 应聘端地址
-  hrUrl: 'https://recruit-uat.fuzfu.net', // 招聘端地址
+  backendBaseUrl: "https://hngbo-54b18a.postdemo.tcn.asia", // 后台地址
 };
 // sit环境地址
 const urlSit = {
-  backendBaseUrl: "https://employee-uat.fuzfu.net/job-platform-employee", // 后台地址
-  employeeUrl: 'https://job-uat.fuzfu.net', // 应聘端地址
-  hrUrl: 'https://recruit-uat.fuzfu.net', // 招聘端地址
+  backendBaseUrl: "https://hngbo-54b18a.postdemo.tcn.asia", // 后台地址
 };
 // 生产环境地址
 const urlProd = {
-  backendBaseUrl: "https://employee.fuzfu.net/job-platform-employee", // 后台地址
-  employeeUrl: 'https://job.fuzfu.net', // 应聘端地址
-  hrUrl: 'https://recruit.fuzfu.net', // 招聘端地址
+  backendBaseUrl: "https://hngbo-54b18a.postdemo.tcn.asia", // 后台地址
 };
 
 const urlConfig = () => {
