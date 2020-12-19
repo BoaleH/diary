@@ -19,10 +19,11 @@
     padding: 53px 24px;
 
     .paperHeader {
+      width: 100%;
+      height: 47px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 47px;
       margin-bottom: 34px;
 
       .diaryTitle, .diaryDate {

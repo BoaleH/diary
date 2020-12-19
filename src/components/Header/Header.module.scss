@@ -21,6 +21,11 @@
 .title {
   font: 300 24px NotoSansSC;
   color: #42495e;
+  max-width: 700px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
 }
 
 .headerRightBtn {

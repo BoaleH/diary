@@ -1,17 +1,8 @@
-export const changeLoadingStatus = (showLoading: boolean) => {
+export const changeToken = (token: string) => {
   return {
-    type: 'CHANGE_LOADING_STATUS',
+    type: 'CHANGE_TOKEN',
     payload: {
-      showLoading
+      token
     }
   }
-}
-
-export const changeLoginPopupShow = (showLoginPopup: boolean) => {
-  return {
-    type: 'CHANGE_LOGINPOPUP_SHOW',
-    payload: {
-      showLoginPopup
-    }
-  }
-}
+};

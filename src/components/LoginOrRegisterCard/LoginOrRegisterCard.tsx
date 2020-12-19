@@ -6,6 +6,7 @@ type StateType = {
   [propName: string]: any;
 };
 type PropType = {
+  errorPrompt?: string; // 错误提示
   [propName: string]: any;
 };
 interface LoginOrRegisterCard {
@@ -14,12 +15,13 @@ interface LoginOrRegisterCard {
 }
 class LoginOrRegisterCard extends Component {
   render() {
-    const { children } = this.props
+    const { children, errorPrompt } = this.props
     return (
       <div className={style.LoginOrRegisterCard}>
         <div className={style.avatal}>
           <img src={avatalImg} alt="LoginOrRegisterCardAvatalImg"/>
         </div>
+        {errorPrompt && <div className={style.error}>{errorPrompt}</div>}
         <Fragment>
           {children}
         </Fragment>

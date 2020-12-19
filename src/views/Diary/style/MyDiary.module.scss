@@ -9,7 +9,7 @@
   flex: 1;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 30px 0 0 27px;
+  padding: 30px 0 30px 27px;
 
   .card {
     float: left;
@@ -39,6 +39,13 @@
     }
 
     .diaryTitle {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
       margin-top: 59px;
       text-align: center;
       font: 300 24px NotoSansSC;

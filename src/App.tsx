@@ -2,6 +2,7 @@ import React, { Suspense, Component, Fragment } from "react";
 import { Route, Switch, Redirect, withRouter as realWithRouter } from "react-router-dom";
 // 这里的是路由配置文件
 import routes from "./router/index";
+import { connect as realConnect } from "react-redux";
 
 type StateType = {
   [propName: string]: any;
@@ -16,11 +17,25 @@ interface App {
 
 // 获取路由信息
 const withRouter: any = realWithRouter;
+
+const mapStateToProps = (state: any) => {
+  return {
+    state,
+  };
+};
+
+const connect: any = realConnect;
+@connect(mapStateToProps, {})
 @withRouter
+
 class App extends Component {
   componentDidMount() {
     // 将history挂载在window，使得各处都可以使用
     window.reactHistory = this.props.history;
+    // 如果没有token，则跳去登录页
+    if (!this.props.state.CommonReducer.token) {
+      this.props.history.push('/Login');
+    }
   }
 
   render() {

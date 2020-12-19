@@ -18,6 +18,17 @@
     box-sizing: border-box;
     padding: 48px 24px;
 
+    .error {
+      width: 100%;
+      margin-bottom: 18px;
+      margin-top: 24px;
+      font: 300 25px NotoSansSC;
+      color: #df0b0b;
+      text-align: center;
+      height: 37px;
+      line-height: 37px;
+    }
+
     .titleInput {
       width: 100%;
       margin-bottom: 36px;
@@ -26,6 +37,12 @@
     .contentInput {
       width: 100%;
       margin-bottom: 48px;
+    }
+
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

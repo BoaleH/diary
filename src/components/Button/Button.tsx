@@ -16,6 +16,7 @@ type PropType = {
   btnHeigth?: number; // 按钮高度
   fontSize?: number; // 文字大小
   disabled?: boolean; // 是否禁用
+  btnClickCallBack?: any; // 按钮点击的回调函数
   [propName: string]: any;
 };
 interface Button {
@@ -40,9 +41,9 @@ class Button extends Component {
   }
 
   render() {
-    const { bottonText, disabled } = this.props;
+    const { bottonText, disabled, btnClickCallBack } = this.props;
     return (
-      <div className={disabled ? style.disabled : style.button} style={this.handleBtnStyle()}>
+      <div className={disabled ? style.disabled : style.button} style={this.handleBtnStyle()} onClick={disabled ? () => {} : btnClickCallBack}>
         {bottonText}
       </div>
     )

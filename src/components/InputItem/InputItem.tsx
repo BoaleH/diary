@@ -18,6 +18,7 @@ type PropType = {
   titleMarginBottom?: number; // 输入框标题与输入框的间距
   InputItemPlaceholder?: string; // 输入框提示
   inputType?: string; // 输入框输入类型
+  inputCallback: any; // 输入回调函数
   [propName: string]: any;
 };
 interface InputItem {
@@ -40,13 +41,13 @@ class InputItem extends Component {
   }
 
   render() {
-    const { inputOrTextarea, inputItemTitle, InputItemPlaceholder, inputType } = this.props;
+    const { inputOrTextarea, inputItemTitle, InputItemPlaceholder, inputType, inputCallback } = this.props;
 
     return (
       <div className={style.InputItem}>
         <div className={style.InputItemTitle} style={this.handleTitleStyle()}>{inputItemTitle}</div>
-        {inputOrTextarea === 'input' && <input type={inputType} className={style.InputItemInput} placeholder={InputItemPlaceholder}/>}
-        {inputOrTextarea === 'textarea' && <textarea placeholder={InputItemPlaceholder} className={style.InputItemTextarea} />}
+        {inputOrTextarea === 'input' && <input type={inputType} className={style.InputItemInput} placeholder={InputItemPlaceholder} onChange={inputCallback} />}
+        {inputOrTextarea === 'textarea' && <textarea placeholder={InputItemPlaceholder} className={style.InputItemTextarea} onChange={inputCallback} />}
       </div>
     )
   }
