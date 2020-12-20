@@ -100,7 +100,6 @@ class Register extends Component {
       this.props.changeToken(res.token);
       this.props.history.push('/');
     } catch (error) {
-      console.log(error)
       const statusCode = error.response.status || null;
       switch (statusCode) {
         case 400:

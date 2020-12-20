@@ -34,7 +34,7 @@ class App extends Component {
     window.reactHistory = this.props.history;
     // 如果没有token，则跳去登录页
     if (!this.props.state.CommonReducer.token) {
-      this.props.history.push('/Login');
+      // this.props.history.push('/Login');
     }
   }
 

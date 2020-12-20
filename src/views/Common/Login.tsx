@@ -81,6 +81,7 @@ class Login extends Component {
     try {
       const res: any = await loginApi(params);
       this.props.changeToken(res.token);
+      // localStorage.setItem('token', res.token);
       this.props.history.push('/');
     } catch (error) {
       const statusCode = error.response.status || null;

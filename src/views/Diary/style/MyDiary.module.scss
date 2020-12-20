@@ -11,6 +11,11 @@
   box-sizing: border-box;
   padding: 30px 0 30px 27px;
 
+  .scrollBox {
+    width: 100%;
+    overflow: auto;
+  }
+
   .card {
     float: left;
     width: 444px;
@@ -52,4 +57,12 @@
       color: #42495e;
     }
   }
+}
+
+.lessPageContent {
+  justify-content: flex-start;
+}
+
+.lessCard {
+  margin-right: 27px;
 }
